@@ -118,17 +118,29 @@ console.log(getVowels(daString));
 // create array that will pass
 var passArr = ['q', 'q', 'y', 'y'];
 // create array that will fail
-var failArr = ['o', 'p', 'p', 'o'];
+var failArr = ['o', 'o', 'p', 'o'];
 function captureTwins (arr) {
-  for (var i = 0; i < arr.length; i+2) {
-    if (arr[i] === arr[i+1]) {
-      return true;
+  var oddIndex = [];
+  var evenIndex = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (i % 2 !== 0) {
+      oddIndex.push(arr[i]);
     }
     else {
-      return false
+      evenIndex.push(arr[i]);
     }
   }
+  for(i = 0; i < evenIndex.length; i++) {
+    if (oddIndex[i] === evenIndex[i]) {
+      var result = true;
+    }
+    else {
+      result = false;
+    }
+  }
+  return result;
 }
+console.log(captureTwins(failArr));
 
 // -------------- //
 // NINTH FUNCTION //

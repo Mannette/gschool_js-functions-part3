@@ -57,12 +57,21 @@ describe('Get Vowels', function () {
 });
 
 var pairedArr = ['a', 'a', 'l', 'l', 'o', 'o'];
-var notPairedArr = ['a', 't', 't', 'r', 'u'];
+var notPairedArr = ['a', 'a', 't', 't', 'u'];
 describe('Capture Twins', function () {
   it('should return true if every adjacent pair in array is the same', function () {
     expect(code.captureTwins(pairedArr)).toEqual(true);
   });
   it('should return false if each adjacent pair is not the same', function () {
     expect(code.captureTwins(notPairedArr)).toEqual(false);
+  });
+});
+
+describe('Test Boolean Logic', function () {
+  it('should return true if any value is true', function () {
+    expect(code.testBooleanLogic()).toEqual(true);
+  });
+  it('should return false if there are no true values', function () {
+    expect(code.testBooleanLogic()).toEqual(false);
   });
 });
