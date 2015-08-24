@@ -116,11 +116,18 @@ console.log(getVowels(daString));
 // EIGHTH FUNCTION //
 // --------------- //
 // create array that will pass
-var passArr = [];
+var passArr = ['q', 'q', 'y', 'y'];
 // create array that will fail
-var failArr = [];
+var failArr = ['o', 'p', 'p', 'o'];
 function captureTwins (arr) {
-
+  for (var i = 0; i < arr.length; i+2) {
+    if (arr[i] === arr[i+1]) {
+      return true;
+    }
+    else {
+      return false
+    }
+  }
 }
 
 // -------------- //
