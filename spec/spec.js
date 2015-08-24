@@ -31,8 +31,9 @@ describe('Negative Index', function() {
   });
 });
 
+var str = 'This is a string';
 describe('Remove Character', function() {
   it('should remove characters passed as the second argument', function() {
-    expect(code.removeCharacter()).toEqual();
+    expect(code.removeCharacter(str)).toEqual();
   });
 });

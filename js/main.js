@@ -30,6 +30,11 @@ function getNegativeIndex (arr, num) {
 }
 console.log(getNegativeIndex(letterArray, -4));
 
+var toEdit = 'Hello there';
+function editString (str, char) {
+  
+}
+
 module.exports = {
   'getStudentName': getStudentName,
   'getTotalLetters': getTotalLetters,
