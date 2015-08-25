@@ -67,11 +67,13 @@ describe('Capture Twins', function () {
   });
 });
 
+var booleanPass = [false, false, false, true, false];
+var booleanFail = [false, false, false, false];
 describe('Test Boolean Logic', function () {
   it('should return true if any value is true', function () {
-    expect(code.testBooleanLogic()).toEqual(true);
+    expect(code.testBooleanLogic(booleanPass)).toEqual(true);
   });
   it('should return false if there are no true values', function () {
-    expect(code.testBooleanLogic()).toEqual(false);
+    expect(code.testBooleanLogic(booleanFail)).toEqual(false);
   });
 });

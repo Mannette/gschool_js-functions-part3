@@ -120,17 +120,23 @@ var passArr = ['q', 'q', 'y', 'y'];
 // create array that will fail
 var failArr = ['o', 'o', 'p', 'o'];
 function captureTwins (arr) {
+  // create arrays to hold seperate indices
   var oddIndex = [];
   var evenIndex = [];
+  // loop through passed array
   for (var i = 0; i < arr.length; i++) {
     if (i % 2 !== 0) {
+      // push elements with an odd index
       oddIndex.push(arr[i]);
     }
     else {
+      // push elements with an even index
       evenIndex.push(arr[i]);
     }
   }
+  // iterate over length of even index array
   for(i = 0; i < evenIndex.length; i++) {
+    // compare values at index
     if (oddIndex[i] === evenIndex[i]) {
       var result = true;
     }
@@ -138,6 +144,7 @@ function captureTwins (arr) {
       result = false;
     }
   }
+  // return result
   return result;
 }
 console.log(captureTwins(failArr));
@@ -145,9 +152,20 @@ console.log(captureTwins(failArr));
 // -------------- //
 // NINTH FUNCTION //
 // -------------- //
+// create arrays to pass and fail
+var booleanPass = [false, false, false, true, false];
+var booleanFail = [false, false, false, false];
 function testBooleanLogic (arr) {
-
+  for (var i = 0; i < arr.length; i++) {
+    if (arr.indexOf(true) !== -1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+console.log(testBooleanLogic(booleanPass));
+testBooleanLogic(booleanFail);
 
 // -------------- //
 // TENTH FUNCTION //
