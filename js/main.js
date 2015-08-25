@@ -156,7 +156,9 @@ console.log(captureTwins(failArr));
 var booleanPass = [false, false, false, true, false];
 var booleanFail = [false, false, false, false];
 function testBooleanLogic (arr) {
+  // check entire array
   for (var i = 0; i < arr.length; i++) {
+    // if true exists in array
     if (arr.indexOf(true) !== -1) {
       return true;
     } else {
@@ -170,9 +172,18 @@ testBooleanLogic(booleanFail);
 // -------------- //
 // TENTH FUNCTION //
 // -------------- //
-function getUniqueValues (arr) {
+var someArr = ['e', 'r', 'b', 'this', 'that', 'e', 'this', 'b'];
 
+function getUniqueValues (arr) {
+  var uniqueValues = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (uniqueValues.indexOf(arr[i]) === -1) {
+      uniqueValues.push(arr[i]);
+    }
+  }
+  return uniqueValues
 }
+console.log(getUniqueValues(someArr));
 
 // -------------- //
 // MODULE EXPORTS //

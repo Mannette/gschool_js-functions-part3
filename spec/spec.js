@@ -25,6 +25,7 @@ describe('Create Object', function () {
 });
 
 var letterArray = ['a', 'b', 'c', 'd', 'e'];
+
 describe('Negative Index', function () {
   it('should return the value from the array at the given negative index', function () {
     expect(code.getNegativeIndex(letterArray, -2)).toEqual('d');
@@ -32,6 +33,7 @@ describe('Negative Index', function () {
 });
 
 var str = 'This is a string';
+
 describe('Remove Character', function () {
   it('should remove characters passed as the second argument', function () {
     expect(code.removeCharacter(str, 'i')).toEqual('Ths s a strng');
@@ -43,6 +45,7 @@ describe('Remove Character', function () {
 });
 
 var newObj = {john: 10, jerry: 11, jenny: 12};
+
 describe('Output Object', function () {
   it('should output key and value pairs', function () {
     expect(code.outputObject(newObj)).toEqual('john is 10, jerry is 11, jenny is 12');
@@ -50,6 +53,7 @@ describe('Output Object', function () {
 });
 
 var testString = "I am the best string!";
+
 describe('Get Vowels', function () {
   it('should return an array of all the vowels in a string with no duplicates', function () {
     expect(code.getVowels(testString)).toEqual(['a', 'e', 'i']);
@@ -58,6 +62,7 @@ describe('Get Vowels', function () {
 
 var pairedArr = ['a', 'a', 'l', 'l', 'o', 'o'];
 var notPairedArr = ['a', 'a', 't', 't', 'u'];
+
 describe('Capture Twins', function () {
   it('should return true if every adjacent pair in array is the same', function () {
     expect(code.captureTwins(pairedArr)).toEqual(true);
@@ -69,11 +74,20 @@ describe('Capture Twins', function () {
 
 var booleanPass = [false, false, false, true, false];
 var booleanFail = [false, false, false, false];
+
 describe('Test Boolean Logic', function () {
   it('should return true if any value is true', function () {
     expect(code.testBooleanLogic(booleanPass)).toEqual(true);
   });
   it('should return false if there are no true values', function () {
     expect(code.testBooleanLogic(booleanFail)).toEqual(false);
+  });
+});
+
+var thisArr = ['a', 'b', 'd', 'a', 'd', 'e'];
+
+describe('Unique Values', function () {
+  it('should return a new array consisting of unique values', function () {
+    expect(code.getUniqueValues(thisArr)).toEqual(['a', 'b', 'd', 'e']);
   });
 });
